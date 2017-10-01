@@ -1,0 +1,22 @@
+// List all containers
+docker ps -a
+
+// Stop a containers
+docker stop go-docker
+
+// Remove a container
+docker container rm go-docker
+
+// Build dev version with code reloading
+docker build --rm -t go-docker ./ --build-arg app_env=development
+
+// Run dev version
+docker run -i -t -p 8080:8080 -v `pwd`/app:/go/src/app --name="go-docker" go-docker
+
+// Build production version
+docker build --rm -t go-docker ./ --build-arg app_env=production
+
+// Run production version
+docker run -i -t -p 8080:8080 --name="go-docker" go-docker
+
+
