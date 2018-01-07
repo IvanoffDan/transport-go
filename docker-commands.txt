@@ -11,7 +11,7 @@ docker container rm go-docker
 docker build --rm -t go-docker ./ --build-arg app_env=development
 
 // Run dev version
-docker run -i -t -p 8080:8080 -v `pwd`/src/app:/go/src/app --name="go-docker" go-docker
+docker run -i -t -p 8080:8080 -v `pwd`/go-server/src/app:/go/src/app --name="go-docker" go-docker
 
 // Build production version
 docker build --rm -t go-docker ./ --build-arg app_env=production

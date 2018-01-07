@@ -1,4 +1,4 @@
-app/tmp/**
-pkg
-bin
+go-server/src/app/tmp/**
+go-server/pkg
+go-server/bin
 .DS_Store
