@@ -1,2 +1,4 @@
 app/tmp/**
+pkg
+bin
 .DS_Store
