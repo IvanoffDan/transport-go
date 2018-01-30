@@ -20,7 +20,7 @@ CMD if [ ${APP_ENV} = production ]; \
 	then \
 	${GOPATH}/bin/main; \
 	else \
-	go get github.com/pilu/fresh && \
+	go get github.com/razonyang/fresh && \
 	fresh -c ${GOPATH}/src/app/runner.conf; \
 	fi
 	
